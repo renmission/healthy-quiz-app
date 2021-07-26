@@ -1,0 +1,49 @@
+<form action="/login" method="post">
+    <div>
+        {{#if error}}
+            <p class="err-msg">Username or password is incorrect!</p>
+        {{/if}}
+        <h1>Login</h1>
+    </div>
+    <div class="form-group">
+        <label for="name">Username:</label>
+        <input 
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Enter your username"
+            required />
+    </div>
+    <div class="form-group">
+        <label for="password">Password:</label>
+        <input 
+            type="password" 
+            name="password"
+            id="password"
+            placeholder="Enter your password"
+            required />
+    </div>
+    <div>
+        <input type="submit" value="login" class="btn btn-login">
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+     <div class="row">
+        <div class="col-md-12">
+            <a class="btn btn-lg btn-google btn-block  btn-outline" href="/auth/facebook">
+            <img src="https://img.icons8.com/fluent/42/000000/facebook-new.png"/> Sign In with Facebook</a> 
+        <div>
+     </div>
+
+     <br>
+
+     <div class="row">
+        <div class="col-md-12">
+            <a class="btn btn-lg btn-google btn-block  btn-outline" href="/auth/google">
+            <img src="https://img.icons8.com/color/42/000000/google-logo.png"/> Sign In with Google</a> 
+        <div>
+     </div>
+</form>
