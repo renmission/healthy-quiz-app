@@ -28,68 +28,49 @@ exports.getLogin = (req, res) => {
 
 exports.loginLocal = passport.authenticate('local', {
     successRedirect: '/',
-    failureRedirect: '/login?error=true'
-});
+    failureRedirect: '/login'
+}), 
+
 
 exports.logout = (req, res, next) => {
-    req.session = null;
     req.logout();
     res.redirect('/');
 }
 
-exports.signup = async (req, res) => {
-    const { name, email, password, confirmPassword } = req.body;
 
-    const newUser = await User.create({
-        name,
-        email,
-        password,
-        confirmPassword
-    });
+exports.getSignup = (req, res) => {
+    const response = {
+        title: "Sign up",
+        error: req.query.error
+    }        
 
-    await newUser.save();
-
-    res.redirect('/login');
+    res.render('signup', response);
 }
 
-// exports.signup = async (req, res) => {
-//     const exists = await User.exists({ user: "admin" });
-//     if (exists) {
-//         return res.redirect('/login');
-//     }
+exports.signup = async (req, res) => {
+  try {
+    const { firstName, lastName, email, password, confirmPassword } = req.body;
 
-//     bcrypt.genSalt(10, function (err, salt) {
-//         if (err) return next(err);
-//         bcrypt.hash('mypassword', salt, function (err, hash) {
-//             const newAdmin = new User({
-//                 username: "admin",
-//                 password: hash
-//             });
+    const hashPassword = await bcrypt.hash(password, 10);
 
-//             newAdmin.save();
+    const newUser = {
+       local: {
+            firstName,
+            lastName,
+            email,
+            password: hashPassword,
+            confirmPassword: hashPassword
+       }
+    };
 
-//             res.redirect('/login');
-//         });
-//     });
-// }
+    new User(newUser)
+            .save()
+            .then(() => res.redirect('/'));
 
-// exports.signup = async (req, res, next) => {
-//     const { name, email, password, confirmPassword } = req.body;
-
-//     const newUser = await new User({
-//         name,
-//         email,
-//         password,
-//         confirmPassword
-//     });
-
-//     res.status(200).json({
-//         status: 'success',
-//         data: {
-//             user: newUser
-//         }
-//     });
-// }
+  } catch {
+      res.redirect('/signup');
+  }
+}
 
 
 exports.googleLogin = passport.authenticate('google', { scope: ['profile', 'email'] });

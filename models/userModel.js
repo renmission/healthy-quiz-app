@@ -3,16 +3,43 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const UserSchema = new Schema({
-    googleID: String,
-    email: {
-        type: String,
-        required: true
+    google: {
+        googleID: String,
+        email: String,
+        firstName: String,
+        lastName:  String,
+        image:  String,
     },
-    firstName: String,
-    lastName:  String,
-    password:  String,
-    confirmPassword: String,
-    image:  String,
+
+    facebook: {
+        facebookID: String,
+        facebookDisplayName: String,
+        email: String,
+        firstName: String,
+        lastName:  String,
+        image:  String,
+    },
+
+    local: {
+        email: String,
+        firstName: String,
+        lastName:  String,
+        password:  String,
+        confirmPassword: String,
+    },
+
+    gender: String,
+    height: String,
+    weight: String,
+    mobileNumber: String,
+    birthDate: String,
+    country: String,
+    postalCode: String,
+    createdAt: {
+        type: Date,
+        default: Date.now
+    }
+   
 });
 
 // UserSchema.pre('save', async function(next) {

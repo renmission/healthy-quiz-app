@@ -28,10 +28,11 @@ mongoose
 app.engine('hbs', hbs({ extname: '.hbs'}));
 app.set('view engine', 'hbs');
 app.use(express.static(__dirname + "/public"));
+
 app.use(session({
-    secret: 'secretahere!',
+    secret: process.env.SESSION_SECRET,
     resave: false,
-    saveUninitialized: true
+    saveUninitialized: false
 }));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
