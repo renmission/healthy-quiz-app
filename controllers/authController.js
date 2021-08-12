@@ -14,20 +14,24 @@ exports.isLoggedOut = (req, res, next) => {
 }
 
 exports.home = (req, res) => {
-    res.render('index', {title: 'Home'} );
+    res.render('index', { 
+        title: 'Home',
+        isLoggedIn: true
+    });
 }
 
 exports.getLogin = (req, res) => {
     const response = {
         title: "login",
-        error: req.query.error
+        error: req.query.error,
+        isLoggedOut: true
     }        
 
     res.render('login', response);
 }
 
 exports.loginLocal = passport.authenticate('local', {
-    successRedirect: '/',
+    successRedirect: '/quiz',
     failureRedirect: '/login'
 }), 
 
@@ -41,7 +45,8 @@ exports.logout = (req, res, next) => {
 exports.getSignup = (req, res) => {
     const response = {
         title: "Sign up",
-        error: req.query.error
+        error: req.query.error,
+        isLoggedOut: true
     }        
 
     res.render('signup', response);
@@ -76,13 +81,17 @@ exports.signup = async (req, res) => {
 exports.googleLogin = passport.authenticate('google', { scope: ['profile', 'email'] });
 
 exports.googleLoginCallback = passport.authenticate('google', { 
-    successRedirect: '/',
+    successRedirect: '/quiz',
     failureRedirect: '/login' 
-});
+}), (req, res, next) => {
+    const user = User.findOne({ email: req.body.google.email });
+    console.log(user);
+    if(user) return next();
+};
 
 exports.facebookLogin = passport.authenticate('facebook');
 
 exports.facebookLoginCallback = passport.authenticate('facebook', { 
-    successRedirect: '/',
+    successRedirect: '/quiz',
     failureRedirect: '/login' 
 });

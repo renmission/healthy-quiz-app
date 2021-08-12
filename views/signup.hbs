@@ -1,77 +1,114 @@
-<form action="/signup" method="post">
-    <div>
-        {{#if error}}
-            <p class="err-msg">Email or password is incorrect!</p>
-        {{/if}}
-        <h1>Signup</h1>
-    </div>
-    <div class="form-group">
-    <label for="firstName">First Name:</label>
-        <input 
-            type="text"
-            name="firstName"
-            id="firstName"
-            placeholder="Enter your First Name"
-            required />
-    </div>
-    <div class="form-group">
-        <label for="lastName">Last Name:</label>
-        <input 
-            type="text"
-            name="lastName"
-            id="lastName"
-            placeholder="Enter your Last Name"
-            required />
-    </div>
-    <div class="form-group">
-        <label for="Email">Email:</label>
-        <input 
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Enter your Email"
-            required />
-    </div>
-    <div class="form-group">
-        <label for="password">Password:</label>
-        <input 
-            type="password" 
-            name="password"
-            id="password"
-            placeholder="Enter your password"
-            required />
-    </div>
+   <section class="page-section" id="about">
+            <div class="container px-5 py-5">
+                <div class="row gx-5 align-items-center justify-content-center">
+                    <div class="col-lg-8 col-xl-7 col-xxl-6">
+                        <div class="my-5 text-center text-xl-start">
 
-     <div class="form-group">
-        <label for="confirmPassword">Confirm Password:</label>
-        <input 
-            type="password" 
-            name="confirmPassword"
-            id="confirmPassword"
-            placeholder="Enter your password"
-            required />
-    </div>
-    <div>
-        <input type="submit" value="Sign up" class="btn btn-login">
-    </div>
+                            <h1>Sign up</h1>
 
-    <br>
-    <hr>
-    <br>
+                            <form action="/signup">
 
-     <div class="row">
-        <div class="col-md-12">
-            <a class="btn btn-lg btn-google btn-block  btn-outline" href="/auth/facebook">
-            <img src="https://img.icons8.com/fluent/42/000000/facebook-new.png"/> Sign In with Facebook</a> 
-        <div>
-     </div>
+                                <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start mb-2">
+                                    <div class="form-group">
+                                        <label for="firstName">First Name:</label>
+                                        <input 
+                                            type="text" 
+                                            class="form-control"
+                                            id="firstName"
+                                            name="firstName"
+                                            placeholder="Enter your first name"
+                                            required
+                                        />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="lastName">Last Name:</label>
+                                        <input 
+                                            type="text" 
+                                            class="form-control"
+                                            id="lastName"
+                                            name="lastName"
+                                            placeholder="Enter your last name"
+                                            required
+                                        />
+                                    </div>
+                                </div>
 
-     <br>
+                                <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start mb-2">
+                                    <div class="form-group">
+                                        <label for="email">Email:</label>
+                                        <input 
+                                            type="text" 
+                                            class="form-control"
+                                            id="email"
+                                            name="email"
+                                            placeholder="Enter your email"
+                                            required
+                                        />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password">Password:</label>
+                                        <input 
+                                            type="text" 
+                                            class="form-control"
+                                            id="password"
+                                            name="password"
+                                            placeholder="Enter your password"
+                                            required
+                                        />
+                                    </div>
+                                </div>
 
-     <div class="row">
-        <div class="col-md-12">
-            <a class="btn btn-lg btn-google btn-block  btn-outline" href="/auth/google">
-            <img src="https://img.icons8.com/color/42/000000/google-logo.png"/> Sign In with Google</a> 
-        <div>
-     </div>
-</form>
+                            
+                                <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start mb-2">
+                                    <div class="form-group">
+                                        <label for="confirmPassword">Confirm Password:</label>
+                                        <input 
+                                            type="text" 
+                                            class="form-control"
+                                            id="confirmPassword"
+                                            name="confirmPassword"
+                                            placeholder="Enter your confirm password"
+                                            required
+                                        />
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input 
+                                            type="submit" 
+                                            class="form-control btn btn-success btn-lg px-5 me-sm-4 mt-3"
+                                            id="confirmPassword"
+                                            name="confirmPassword"
+                                            placeholder="Enter your confirm password"
+                                            required
+                                        />
+
+                                    </div>
+
+                                   
+
+                                </div>
+
+                                <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                                   
+                                    <p class="text-muted px-auto">Already signed up? <a href="/login">Log in </a> here!</p>
+                                </div>
+                            </form>
+
+                            <hr>
+
+                          
+                            <p class="text-muted mt-3">Take the Healthy Eating Quiz and sign up for free.</p>
+
+                            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start mb-3">
+                                <!-- Facebook Login-->
+                                <a class="btn btn-primary btn-lg px-3 me-sm-3" style="background-color: #3b5998;" href="/auth/facebook" role="button"><i class="fab fa-facebook-f"></i> Log in with Facebook</a>
+                                <!-- Google Login-->
+                                <a class="btn btn-primary btn-lg px-3 me-sm-3" style="background-color: #dd4b39;" href="/auth/google" role="button"><i class="fab fa-google"></i> Log in with Google</a>
+                            </div>
+                 
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="https://images.pexels.com/photos/1656666/pexels-photo-1656666.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="..." /></div>
+                </div>
+            </div>
+        </section>

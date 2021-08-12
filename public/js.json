@@ -1,0 +1,167 @@
+[
+   {
+      "id":1,
+      "question":"How many servings of vegetables (1 serving=1/2 cup) do you usually consume in a day?",
+      "a":"2 or less",
+      "b":"3 or more",
+      "answer":"b"
+   },
+   {
+      "id":2,
+      "question":"What type of vegetables do you consume more often?",
+      "a":"Fresh",
+      "b":"Frozen/ Canned",
+      "answer":"a"
+   },
+   {
+      "id":3,
+      "question":"How many servings of fruits (1 serving=1/2 cup do you usually consume in a day?",
+      "a":"1 or less",
+      "b":"2 or more",
+      "answer":"b"
+   },
+   {
+      "id":4,
+      "question":"What type of fruits do you consume more often?",
+      "a":"Fresh/ fresh juices",
+      "b":"Preserved/ Canned/ Dried",
+      "answer":"a"
+   },
+   {
+      "id":5,
+      "question":"What type of viands do you consume more often?",
+      "a":"Pork, beef, organ meats",
+      "b":"Fish, seafoods, chicken",
+      "answer":"b"
+   },
+   {
+      "id":6,
+      "question":"Do you consume eggs at least three times a week?",
+      "a":"Yes",
+      "b":"No",
+      "answer":"a"
+   },
+   {
+      "id":7,
+      "question":"What cooking method do you use more often to your meals?",
+      "a":"Fried/ cooked with coconut milk/bought outside/ fastfood/ delivery food",
+      "b":"Boiled/ steamed/ grilled/ baked/ roasted/ sautéed/ stir-fry/",
+      "answer":"b"
+   },
+   {
+      "id":8,
+      "question":"Do you consume milk and milk products such as probiotic drinks, yoghurts, etc. everyday?",
+      "a":"Yes",
+      "b":"No",
+      "answer":"a"
+   },
+   {
+      "id":9,
+      "question":"How many servings of carbohydrate rich foods such as rice , bread, noodles/pasta, root crops do you usually consume in a day?",
+      "a":"8 servings or less",
+      "b":"9 or more servings",
+      "answer":"a"
+   },
+   {
+      "id":10,
+      "question":"What type of rice do you usually consume?",
+      "a":"White",
+      "b":"Brown/ red/ black/ multigrain",
+      "answer":"b"
+   },
+   {
+      "id":11,
+      "question":"What type of bread do you usually consume?",
+      "a":"White/ flavored/ with filling",
+      "b":"Whole wheat/ whole grain/ oat crackers or biscuits",
+      "answer":"b"
+   },
+   {
+      "id":12,
+      "question":"How many servings of sugar/ sweeteners (1 serving=1 tsp) do you usually add to your meals/ beverages per day?",
+      "a":"8 servings or less",
+      "b":"9 servings or more",
+      "answer":"b"
+   },
+   {
+      "id":13,
+      "question":"What type of sugar/ sweeteners do you usually consume?",
+      "a":"White/ refined",
+      "b":"Washed/ brown/ muscovado/ coco sugar/ honey",
+      "answer":"b"
+   },
+   {
+      "id":14,
+      "question":"How frequent do you consume sugary products, desserts and sugar sweetened beverages?",
+      "a":"3x a week or less",
+      "b":"Everyday",
+      "answer":"a"
+   },
+   {
+      "id":15,
+      "question":"How many servings (1 serving=1 tsp) of oil/ butter/ margarine or creams do you usually consume in a day?",
+      "a":"8 or less",
+      "b":"9 or more",
+      "answer":"a"
+   },{
+      "id":16,
+      "question":"How many teaspoons of salt do you usually consume in a day?",
+      "a":"Less than 1",
+      "b":"More than 1",
+      "answer":"a"
+   },{
+      "id":17,
+      "question":"How many glasses of water do you usually consume in a day?",
+      "a":"Less than 8",
+      "b":"8 or more",
+      "answer":"b"
+   },{
+      "id":18,
+      "question":"How many hours of sleep do you have per day?",
+      "a":"Less than 6",
+      "b":"6 or more",
+      "answer":"b"
+   },{
+      "id":19,
+      "question":"How many hours do you usually exercise in a week?",
+      "a":"Less than 2",
+      "b":"2 or more",
+      "answer":"b"
+   },{
+      "id":20,
+      "question":"Do you smoke?",
+      "a":"Yes",
+      "b":"No",
+      "answer":"b"
+   },{
+      "id":21,
+      "question":"Do you drink alcoholic beverages? ",
+      "a":"Yes",
+      "b":"No",
+      "answer":"b"
+   },{
+      "id":22,
+      "question":"I tend to stop eating when I am already full.",
+      "a":"Agree",
+      "b":"Disagree",
+      "answer":"a"
+   },{
+      "id":23,
+      "question":"I tend to eat slowly, chewing every bite.",
+      "a":"Agree",
+      "b":"Disagree",
+      "answer":"a"
+   },{
+      "id":24,
+      "question":"I like to multi-task while eating (e.g. watching tv, playing something on my phone/computer, doing work, etc.)",
+      "a":"Agree",
+      "b":"Disagree",
+      "answer":"b"
+   },{
+      "id":25,
+      "question":"I eat when I'm hungry rather than when I'm emotional",
+      "a":"Agree",
+      "b":"Disagree",
+      "answer":"a"
+   }
+]

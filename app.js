@@ -11,12 +11,14 @@ require('./config/passport')(passport);
 // Router init
 const userRouter = require('./routes/userRoutes');
 const authRouter = require('./routes/authRoutes');
+const quizRouter = require('./routes/quizRoutes');
 
 const app = express();
 
 const dbOptions = {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    useCreateIndex: true
 }
 
 mongoose
@@ -45,6 +47,7 @@ app.use(passport.session());
 // ROUTES
 app.use('/', userRouter);
 app.use('/auth', authRouter);
+app.use('/', quizRouter);
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => console.log(`App Listening on port ${port}`));

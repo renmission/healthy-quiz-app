@@ -5,7 +5,10 @@ const Schema = mongoose.Schema;
 const UserSchema = new Schema({
     google: {
         googleID: String,
-        email: String,
+        email: {
+            type: String,
+            unique: true,
+        },
         firstName: String,
         lastName:  String,
         image:  String,
@@ -14,14 +17,20 @@ const UserSchema = new Schema({
     facebook: {
         facebookID: String,
         facebookDisplayName: String,
-        email: String,
+        email: {
+            type: String,
+            unique: true,
+        },
         firstName: String,
         lastName:  String,
         image:  String,
     },
 
     local: {
-        email: String,
+        email: {
+            type: String,
+            unique: true,
+        },
         firstName: String,
         lastName:  String,
         password:  String,

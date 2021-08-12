@@ -1,4 +1,38 @@
-<div class="home">
-    <h1>Home</h1>
-    <a href="/logout">Logout</a>
-</div>
+ <!-- Masthead-->
+        <header class="masthead">
+            <div class="container">
+                
+                <div class="masthead-heading text-uppercase">
+                    How healthy are you?
+                </div>
+                <div class="masthead-subheading">
+                    Find out in under 5 minutes.
+                </div>
+
+                {{#if isLoggedIn}}
+                    <a class="btn btn-success header__cta btn-xl text-uppercase" href="/quiz">Take the Healthy Quiz</a>
+                {{else}}
+                    <a class="btn btn-success header__cta btn-xl text-uppercase" href="/login">Take the Healthy Quiz</a>
+                {{/if}}
+            </div>
+        </header>
+
+
+        <section class="page-section" id="about">
+            <div class="container px-5">
+                <div class="row gx-5 align-items-center justify-content-center">
+                    <div class="col-lg-8 col-xl-7 col-xxl-6">
+                        <div class="my-5 text-center text-xl-start">
+                            <h1 class="display-5 fw-bolder mb-2">Discover how healthy your diet & eating habits are</h1>
+                            <p class="lead fw-normal mb-4">
+                                The Healthy Eating Quiz is designed to rate how healthy your eating habits are and it helps to iden­tify areas in your diet that can be improved. At the end, you’ll receive instant feed­back on your eating habits and you’ll be able to compare to people your age. Your results will be stored in your dash­board, allow­ing you to track your changes over time.
+                            </p>
+                            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                                <a class="btn btn-success btn-lg px-5 me-sm-4 " href="/login">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="https://images.pexels.com/photos/1656666/pexels-photo-1656666.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="..." /></div>
+                </div>
+            </div>
+        </section>

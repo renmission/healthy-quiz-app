@@ -1,0 +1,91 @@
+ <section class="page-section">
+            <!-- Start your project here-->
+        <div class="container my-5 mb-2">
+            <div id="intro">
+                <div class="counter">
+                    <p class="prefix">Question:</p>
+                    <h2 id="counter">1/10</h1>
+                </div>
+                <div class="score">
+                    <p class="prefix">Score:</p>
+                    <h2 id="score">3</h1>
+                </div>
+            </div>
+    
+            <div class="question-holder row mb-5">
+                <div class="col-12 ">
+                    <h2 class="display-4" id="question">What is the answer to this question?</h1>
+                </div>
+            </div>
+    
+            <div class="row">
+            <div class="col-12 mt-5 py-2">
+                <div class="answer-container card">
+                <p class="answer-prefix">A</p>
+                <p class="answer-text" data-answer="a">Answer A</p>
+                </div>
+            </div>
+            </div>
+            <div class="row">
+            <div class="col-12">
+                <div class="answer-container card">
+                <p class="answer-prefix">B</p>
+                <p class="answer-text" data-answer="b">Answer B</p>
+                </div>
+            </div>
+            </div>
+        </div>
+    
+        <!-- Modal -->
+        <div
+            class="modal fade"
+            id="endGameModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">QUIZ ended</h5>
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-mdb-dismiss="modal"
+                    aria-label="Close"
+                ></button>
+                </div>
+                <div class="modal-body" id="modal-body">...</div>
+                <div class="modal-footer">
+                
+                    <button
+                    type="button"
+                    class="btn btn-info"
+                    data-mdb-dismiss="modal"
+                    id="improve"
+                    onclick="document.location='https://bit.ly/Diet-Improvement'"
+                    >
+                    Diet Improvement
+                    </button>
+                
+                <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-mdb-dismiss="modal"
+                >
+                    Close
+                </button>
+                <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-mdb-dismiss="modal"
+                    id="restart"
+                >
+                    Take a Quiz Again
+                </button>
+                </div>
+            </div>
+            </div>
+        </div>
+      <!-- End your project here-->
+        </section>
